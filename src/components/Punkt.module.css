@@ -1,0 +1,41 @@
+.complete{
+    margin-top: 50px;
+    width: 100%;
+}
+.complete ul{
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+.complete ul li{
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.2);
+    list-style: none;
+    text-decoration: line-through;
+    position: relative;
+    transition: .6s;
+    cursor: pointer;
+}
+.complete ul li:hover{
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+.complete ul li::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: url(../images/arrow.png) center/cover no-repeat;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: .2;
+    transition: .6s;
+}
+.complete ul li:hover::before{
+    opacity: 1;
+}
+
+.dark ul{
+    filter: invert(100%);
+}
